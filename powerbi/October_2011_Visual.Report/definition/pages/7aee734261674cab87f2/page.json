@@ -1,0 +1,88 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "7aee734261674cab87f2",
+  "displayName": "产品编码详情",
+  "displayOption": "ActualSize",
+  "height": 220,
+  "width": 576,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "01850f4d792641149a99",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "10月产品交易细节"
+              }
+            },
+            "Property": "商品编号"
+          }
+        },
+        "type": "Categorical",
+        "isHiddenInViewMode": true
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "db91ad27990046809626",
+    "type": "Tooltip",
+    "parameters": [
+      {
+        "name": "44d977ba6fd34b04a148",
+        "boundFilter": "01850f4d792641149a99",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "10月产品交易细节"
+              }
+            },
+            "Property": "商品编号"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F5F7FA'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "pageInformation": [
+      {
+        "properties": {
+          "pageInformationType": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}

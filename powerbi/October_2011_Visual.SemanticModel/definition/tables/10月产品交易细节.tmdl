@@ -1,0 +1,89 @@
+table 10月产品交易细节
+	lineageTag: 1328b573-44ce-4009-86ef-d288ac36fd57
+
+	measure 商品展示名称 = SELECTEDVALUE('10月产品交易细节'[商品描述])
+		lineageTag: 7f7261a6-4faf-4909-b7a7-80ed9649d433
+
+	column 商品编号
+		dataType: string
+		lineageTag: 88aa5dd7-729d-43ec-9d83-06f8aa7ec542
+		summarizeBy: none
+		sourceColumn: 商品编号
+
+		annotation SummarizationSetBy = Automatic
+
+	column 商品描述
+		dataType: string
+		lineageTag: ad63eea8-ba73-41cb-9b31-ceaad866441e
+		summarizeBy: none
+		sourceColumn: 商品描述
+
+		annotation SummarizationSetBy = Automatic
+
+	column 总金额
+		dataType: double
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		lineageTag: 5530a6ff-0f03-4053-ac99-450b0d61395c
+		summarizeBy: none
+		sourceColumn: 总金额
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column 覆盖发票数
+		dataType: int64
+		formatString: 0
+		lineageTag: af7f70ff-5c47-4a57-9544-0b8595a73c44
+		summarizeBy: none
+		sourceColumn: 覆盖发票数
+
+		annotation SummarizationSetBy = User
+
+	column 数量
+		dataType: int64
+		formatString: 0
+		lineageTag: d533c9b8-c418-43cf-ae42-00d8b333993f
+		summarizeBy: none
+		sourceColumn: 数量
+
+		annotation SummarizationSetBy = User
+
+	column stockcode_key
+		dataType: string
+		isHidden
+		lineageTag: bbc9d147-d0d5-42f3-b295-8938151a7705
+		summarizeBy: none
+		sourceColumn: stockcode_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 金额名次
+		dataType: int64
+		formatString: 0
+		lineageTag: c238d8e6-3a29-4bcf-b87d-bb1a61d7b715
+		summarizeBy: none
+		sourceColumn: 金额名次
+
+	column 覆盖名次
+		dataType: int64
+		formatString: 0
+		lineageTag: 5bb2688b-b5b3-4b06-96ae-449a86ea5272
+		summarizeBy: none
+		sourceColumn: 覆盖名次
+
+	partition 10月产品交易细节 = m
+		mode: import
+		source =
+				let
+				    源 = MySQL.Database("localhost:3306", "data_10month", [ReturnSingleDatabase=true, Query="-- A01 商品统计。连接 data_10month 后执行；Power BI 使用同一只读查询。#(lf)WITH detail AS (#(lf)    SELECT#(lf)        HEX(CAST(stockcode AS BINARY)) AS stockcode_key,#(lf)        invoiceno,#(lf)        CAST(description AS BINARY) AS description_bytes,#(lf)        lineamount,#(lf)        quantity#(lf)    FROM product#(lf)),#(lf)product_totals AS (#(lf)    SELECT#(lf)        stockcode_key,#(lf)        COUNT(*) AS detail_row_count,#(lf)        ROUND(SUM(lineamount), 2) AS gross_amount_gbp,#(lf)        COUNT(DISTINCT invoiceno) AS invoice_coverage,#(lf)        SUM(quantity) AS units#(lf)    FROM detail#(lf)    GROUP BY stockcode_key#(lf)),#(lf)description_counts AS (#(lf)    SELECT stockcode_key, description_bytes, COUNT(*) AS occurrences#(lf)    FROM detail#(lf)    WHERE description_bytes IS NOT NULL#(lf)      AND TRIM(CONVERT(description_bytes USING utf8mb4)) <> ''#(lf)    GROUP BY stockcode_key, description_bytes#(lf)),#(lf)description_choices AS (#(lf)    SELECT#(lf)        stockcode_key,#(lf)        description_bytes,#(lf)        COUNT(*) OVER (PARTITION BY stockcode_key) AS description_variants,#(lf)        ROW_NUMBER() OVER (#(lf)            PARTITION BY stockcode_key#(lf)            ORDER BY occurrences DESC, description_bytes#(lf)        ) AS choice_order#(lf)    FROM description_counts#(lf)),#(lf)-- product 已包含描述检查时采用的 44 个暂定主描述。#(lf)-- 对仍有多种描述的编码，只给出待复核标签。#(lf)display_mapping AS (#(lf)    SELECT#(lf)        p.stockcode_key,#(lf)        CONVERT(UNHEX(p.stockcode_key) USING utf8mb4) AS stockcode,#(lf)        CASE WHEN c.description_variants = 1#(lf)             THEN CONVERT(c.description_bytes USING utf8mb4)#(lf)             ELSE CONCAT('待复核 · ', CONVERT(UNHEX(p.stockcode_key) USING utf8mb4))#(lf)        END AS display_name,#(lf)        CASE WHEN c.description_variants = 1 THEN 0 ELSE 1 END AS needs_review#(lf)    FROM product_totals AS p#(lf)    LEFT JOIN description_choices AS c#(lf)        ON p.stockcode_key = c.stockcode_key AND c.choice_order = 1#(lf)),#(lf)non_retail_codes AS (#(lf)    SELECT 'M' AS stockcode, '手工项（未标明商品）' AS reason#(lf)    UNION ALL SELECT 'DOT', '邮费'#(lf)    UNION ALL SELECT 'POST', '邮费'#(lf)    UNION ALL SELECT 'C2', '运费'#(lf)    UNION ALL SELECT 'BANK CHARGES', '银行费用'#(lf)    UNION ALL SELECT 'S', '样品'#(lf)    UNION ALL SELECT 'gift_0001_20', '礼品券'#(lf)),#(lf)product_base AS (#(lf)    SELECT#(lf)        p.*,#(lf)        m.stockcode,#(lf)        m.display_name,#(lf)        m.needs_review,#(lf)        e.reason AS exclusion_reason,#(lf)        CASE WHEN COUNT(*) OVER (#(lf)            PARTITION BY m.stockcode COLLATE utf8mb4_0900_ai_ci#(lf)        ) > 1 THEN CONCAT(m.stockcode, ' [', p.stockcode_key, ']')#(lf)        ELSE m.stockcode END AS product_label#(lf)    FROM product_totals AS p#(lf)    INNER JOIN display_mapping AS m ON p.stockcode_key = m.stockcode_key#(lf)    LEFT JOIN non_retail_codes AS e#(lf)        ON p.stockcode_key = HEX(CAST(e.stockcode AS BINARY))#(lf)),#(lf)regular_ranks AS (#(lf)    SELECT#(lf)        stockcode_key,#(lf)        ROW_NUMBER() OVER (ORDER BY gross_amount_gbp DESC, stockcode_key) AS amount_rank,#(lf)        ROW_NUMBER() OVER (ORDER BY invoice_coverage DESC, stockcode_key) AS coverage_rank#(lf)    FROM product_base#(lf)    WHERE exclusion_reason IS NULL#(lf))#(lf)SELECT#(lf)    p.stockcode_key,#(lf)    p.stockcode,#(lf)    p.product_label,#(lf)    p.display_name,#(lf)    p.needs_review,#(lf)    p.detail_row_count,#(lf)    p.gross_amount_gbp,#(lf)    p.invoice_coverage,#(lf)    p.units,#(lf)    p.exclusion_reason,#(lf)    r.amount_rank,#(lf)    r.coverage_rank#(lf)FROM product_base AS p#(lf)LEFT JOIN regular_ranks AS r ON p.stockcode_key = r.stockcode_key"]),
+				    选择指标 = Table.SelectColumns(源, {"product_label", "display_name", "gross_amount_gbp", "invoice_coverage", "units", "amount_rank", "coverage_rank", "stockcode_key"}),
+				    统一列名 = Table.RenameColumns(选择指标, {{"product_label", "商品编号"}, {"display_name", "商品描述"}, {"gross_amount_gbp", "总金额"}, {"invoice_coverage", "覆盖发票数"}, {"units", "数量"}, {"amount_rank", "金额名次"}, {"coverage_rank", "覆盖名次"}}),
+				    指标类型 = Table.TransformColumnTypes(统一列名, {{"金额名次", Int64.Type}, {"覆盖名次", Int64.Type}, {"数量", Int64.Type}, {"覆盖发票数", Int64.Type}})
+				in
+				    指标类型
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = 导航
+

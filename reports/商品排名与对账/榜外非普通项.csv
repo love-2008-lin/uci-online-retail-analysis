@@ -1,0 +1,8 @@
+﻿stockcode_key,stockcode,display_name,gross_amount_gbp,units,invoice_coverage,detail_row_count,observed_description,unit_price_min_gbp,unit_price_max_gbp,exclusion_reason
+42414E4B2043484152474553,BANK CHARGES,Bank Charges,30,2,2,2,Bank Charges,15.0,15.0,银行费用
+4332,C2,CARRIAGE,700,14,14,14,CARRIAGE,50.0,50.0,运费
+444F54,DOT,DOTCOM POSTAGE,17955.13,43,43,43,DOTCOM POSTAGE,3.29,2019.05,邮费
+4D,M,Manual,21116.67,974,40,43,Manual,0.08,4161.06,手工项（未标明商品）
+504F5354,POST,POSTAGE,8025.96,349,126,126,POSTAGE,0.55,240.0,邮费
+53,S,SAMPLES,33.05,1,1,1,SAMPLES,33.05,33.05,样品
+676966745F303030315F3230,gift_0001_20,Dotcomgiftshop Gift Voucher £20.00,16.67,1,1,1,Dotcomgiftshop Gift Voucher £20.00,16.67,16.67,礼品券

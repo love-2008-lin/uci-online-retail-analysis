@@ -1,0 +1,21 @@
+model Model
+	culture: zh-CN
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: zh-CN
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["10月每日正向交易情况","市场正向交易情况","10月产品交易细节"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 10月每日正向交易情况
+ref table 市场正向交易情况
+ref table 10月产品交易细节
+
+ref cultureInfo zh-CN
+

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "329bf72466d245e30dbe",
+  "displayName": "10月市场经营复盘",
+  "displayOption": "FitToPage",
+  "height": 1498,
+  "width": 1440,
+  "pageBinding": {
+    "name": "98ced7d06e9c8e2626b0",
+    "type": "Default",
+    "parameters": []
+  },
+  "visualInteractions": [
+    {
+      "source": "23a5e51eb581ab6a6a99",
+      "target": "fe8a72df34cce12309b7",
+      "type": "NoFilter"
+    }
+  ]
+}

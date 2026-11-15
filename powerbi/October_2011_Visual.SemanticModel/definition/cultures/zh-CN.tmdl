@@ -1,0 +1,1260 @@
+cultureInfo zh-CN
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "entity_10月产品交易细节.商品展示名称": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "商品展示名称"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "商品展示名称": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "商品描述": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "10月每日正向交易情况": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.日期": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "日期"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "日期": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "entity_10月每日正向交易情况.正向商品金额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "正向商品金额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "正向商品金额": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.有效发票数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "有效发票数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "有效发票数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.正向商品总额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "正向商品总额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "正向商品总额": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "正向商品总额(含非普通项)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.有效发票总数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "有效发票总数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "有效发票总数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.每张发票平均金额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "每张发票平均金额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "每张发票平均金额": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况.覆盖市场数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月每日正向交易情况",
+			          "ConceptualProperty": "覆盖市场数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "覆盖市场数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "市场正向交易情况": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "市场正向交易情况"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "市场正向交易情况": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "市场正向交易情况.country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "市场正向交易情况",
+			          "ConceptualProperty": "country"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "市场正向交易情况.总金额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "市场正向交易情况",
+			          "ConceptualProperty": "总金额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "总金额": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "市场正向交易情况.有效发票数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "市场正向交易情况",
+			          "ConceptualProperty": "有效发票数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "有效发票数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "市场正向交易情况.平均发票金额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "市场正向交易情况",
+			          "ConceptualProperty": "平均发票金额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "平均发票金额": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "10月产品交易细节": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.商品编号": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "商品编号"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "商品编号": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.商品描述": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "商品描述"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "商品描述": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.总金额": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "总金额"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "总金额": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.覆盖发票数": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "覆盖发票数"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "覆盖发票数": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.数量": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "数量"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "数量": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.stockcode_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "stockcode_key"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "stockcode key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "stockcode_key": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "stockcode solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode recipe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode interpretation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode resolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "stockcode answer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "stockcode mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "stockcode secret": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "stockcode source": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.金额名次": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "金额名次"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "金额名次": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节.覆盖名次": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "10月产品交易细节",
+			          "ConceptualProperty": "覆盖名次"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "覆盖名次": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "entity_10月每日正向交易情况_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.正向商品金额": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.正向商品金额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_10月每日正向交易情况.正向商品金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "正向商品金额_indicates_how_expensive_10月每日正向交易情况_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.正向商品金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_正向商品金额"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.总金额": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.总金额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity_10月产品交易细节.总金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "总金额_indicates_how_expensive_10月产品交易细节_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.总金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_总金额"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_in_country": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "市场正向交易情况.country": {
+			          "Target": {
+			            "Entity": "市场正向交易情况.country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "市场正向交易情况.country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "市场正向交易情况.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_are_in_countries"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_商品展示名称": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.商品展示名称": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.商品展示名称"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.商品展示名称"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_商品展示名称"
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况_has_日期": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.日期": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.日期"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.日期"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_日期"
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况_has_有效发票数": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.有效发票数": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.有效发票数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.有效发票数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_有效发票数"
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况_has_正向商品总额": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.正向商品总额": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.正向商品总额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.正向商品总额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_正向商品总额"
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况_has_有效发票总数": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.有效发票总数": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.有效发票总数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.有效发票总数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_有效发票总数"
+			        }
+			      ]
+			    },
+			    "entity_10月每日正向交易情况_has_每张发票平均金额": {
+			      "Binding": {
+			        "ConceptualEntity": "10月每日正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月每日正向交易情况": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.每张发票平均金额": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.每张发票平均金额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月每日正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.每张发票平均金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月每日正向交易情况_have_每张发票平均金额"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_has_entity_10月每日正向交易情况_覆盖市场数": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "entity_10月每日正向交易情况.覆盖市场数": {
+			          "Target": {
+			            "Entity": "entity_10月每日正向交易情况.覆盖市场数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "entity_10月每日正向交易情况.覆盖市场数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_have_覆盖市场数"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_has_country": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "市场正向交易情况.country": {
+			          "Target": {
+			            "Entity": "市场正向交易情况.country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "市场正向交易情况.country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_have_countries"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_has_总金额": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "市场正向交易情况.总金额": {
+			          "Target": {
+			            "Entity": "市场正向交易情况.总金额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "市场正向交易情况.总金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_have_总金额"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_has_有效发票数": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "市场正向交易情况.有效发票数": {
+			          "Target": {
+			            "Entity": "市场正向交易情况.有效发票数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "市场正向交易情况.有效发票数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_have_有效发票数"
+			        }
+			      ]
+			    },
+			    "市场正向交易情况_has_平均发票金额": {
+			      "Binding": {
+			        "ConceptualEntity": "市场正向交易情况"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "市场正向交易情况": {
+			          "Target": {
+			            "Entity": "市场正向交易情况"
+			          }
+			        },
+			        "市场正向交易情况.平均发票金额": {
+			          "Target": {
+			            "Entity": "市场正向交易情况.平均发票金额"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "市场正向交易情况"
+			            },
+			            "Object": {
+			              "Role": "市场正向交易情况.平均发票金额"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "市场正向交易情况_have_平均发票金额"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_商品编号": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.商品编号": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.商品编号"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.商品编号"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_商品编号"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_商品描述": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.商品描述": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.商品描述"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.商品描述"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_商品描述"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_覆盖发票数": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.覆盖发票数": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.覆盖发票数"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.覆盖发票数"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_覆盖发票数"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_数量": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.数量": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.数量"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.数量"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_数量"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_金额名次": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.金额名次": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.金额名次"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.金额名次"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_金额名次"
+			        }
+			      ]
+			    },
+			    "entity_10月产品交易细节_has_覆盖名次": {
+			      "Binding": {
+			        "ConceptualEntity": "10月产品交易细节"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_10月产品交易细节": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节"
+			          }
+			        },
+			        "entity_10月产品交易细节.覆盖名次": {
+			          "Target": {
+			            "Entity": "entity_10月产品交易细节.覆盖名次"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_10月产品交易细节"
+			            },
+			            "Object": {
+			              "Role": "entity_10月产品交易细节.覆盖名次"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing10月产品交易细节_have_覆盖名次"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

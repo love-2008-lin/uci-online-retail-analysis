@@ -1,0 +1,58 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 6,
+            "y": 9
+          },
+          "nodeIndex": "10月每日正向交易情况",
+          "size": {
+            "height": 182,
+            "width": 255
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 285,
+            "y": 13
+          },
+          "nodeIndex": "市场正向交易情况",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 563,
+            "y": 0
+          },
+          "nodeIndex": "10月产品交易细节",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "所有表",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "所有表",
+  "defaultDiagram": "所有表"
+}

@@ -1,0 +1,69 @@
+table 10月每日正向交易情况
+	lineageTag: 401371dd-1659-4937-942a-d80e3bccad59
+	dataCategory: Time
+
+	measure 正向商品总额 = SUM('10月每日正向交易情况'[正向商品金额])
+		formatString: 0.00
+		lineageTag: 461e285f-9742-47bb-9644-4e62afab26c0
+
+	measure 有效发票总数 = SUM('10月每日正向交易情况'[有效发票数])
+		lineageTag: a87dddf4-4455-4def-8226-421ec5eaa446
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 每张发票平均金额 = DIVIDE( sum('10月每日正向交易情况'[正向商品金额]) ,sum('10月每日正向交易情况'[有效发票数]),0 )
+		lineageTag: a056ffd8-abe8-4988-9f1f-fdf4adf12608
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 覆盖市场数 = COUNT('市场正向交易情况'[country])
+		formatString: 0
+		lineageTag: 8866139e-178a-49c1-b0b4-2f468c53bb14
+
+	column 日期
+		dataType: dateTime
+		isKey
+		formatString: m\月d\日
+		lineageTag: 394edc9b-1b88-4495-8cb7-e310125c273d
+		summarizeBy: none
+		sourceColumn: 日期
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 正向商品金额
+		dataType: double
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		lineageTag: a5ceaeb8-d938-401d-8ecc-3c3c209bc5a4
+		summarizeBy: none
+		sourceColumn: 正向商品金额
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column 有效发票数
+		dataType: int64
+		formatString: 0
+		lineageTag: 72b5fef1-215b-478a-8f57-31bec646780b
+		summarizeBy: none
+		sourceColumn: 有效发票数
+
+		annotation SummarizationSetBy = User
+
+	partition 10月每日正向交易情况 = m
+		mode: import
+		source =
+				let
+				    源 = MySQL.Database("localhost:3306", "data_10month", [ReturnSingleDatabase=true, Query="# 创建日期表#(lf)WITH RECURSIVE date_series AS(#(lf)#(tab)SELECT DATE('2011-10-01') AS sale_day#(lf)#(tab)UNION ALL#(lf)#(tab)SELECT DATE_ADD(sale_day,INTERVAL 1 DAY)#(lf)#(tab)FROM date_series #(lf)#(tab)WHERE sale_day < DATE('2011-10-31')#(lf))#(lf)#(lf)# 查询每日正向商品金额#(lf)SELECT #(lf)#(tab)dt.sale_day ,#(lf)#(tab)IFNULL(d.gross_amount_gbp,0) AS gross_amount_gbp ,#(lf)#(tab)IFNULL(d.invoice_count,0) AS invoice_count#(lf)FROM date_series dt#(lf)LEFT JOIN (#(lf)#(tab)SELECT #(lf)#(tab)#(tab)DATE(invoicedate) AS sale_day ,#(lf)#(tab)#(tab)SUM(lineamount) AS gross_amount_gbp ,#(lf)#(tab)#(tab)COUNT(DISTINCT(invoiceno)) AS invoice_count#(lf)#(tab)FROM lavel2#(lf)#(tab)GROUP BY DATE(invoicedate)#(lf)) AS d#(lf)ON dt.sale_day = d.sale_day#(lf)ORDER BY dt.sale_day ASC;#(lf)"]),
+				    重命名的列 = Table.RenameColumns(源,{{"gross_amount_gbp", "正向商品金额"}, {"invoice_count", "有效发票数"}, {"sale_day", "日期"}})
+				in
+				    重命名的列
+
+	annotation PBI_ResultType = Table
+

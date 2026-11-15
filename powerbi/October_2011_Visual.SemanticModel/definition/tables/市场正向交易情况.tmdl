@@ -1,0 +1,51 @@
+table 市场正向交易情况
+	lineageTag: 219e34c6-a495-42dc-9f70-2ea8666afdf2
+
+	column country
+		dataType: string
+		lineageTag: 448bf300-92ed-4c81-bbc4-8802e65cb5c5
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column 总金额
+		dataType: double
+		lineageTag: 44850d08-b921-4571-a18f-5442eb971e38
+		summarizeBy: none
+		sourceColumn: 总金额
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 有效发票数
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fbd05df-1497-4bfe-8237-f139087a2a68
+		summarizeBy: none
+		sourceColumn: 有效发票数
+
+		annotation SummarizationSetBy = User
+
+	column 平均发票金额
+		dataType: double
+		lineageTag: c3fedd13-f001-43eb-b06c-ca36cdd28664
+		summarizeBy: none
+		sourceColumn: 平均发票金额
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 市场正向交易情况 = m
+		mode: import
+		source =
+				let
+				    源 = MySQL.Database("localhost:3306", "data_10month", [ReturnSingleDatabase=true, Query="select * from lavel2_country;"]),
+				    重命名的列 = Table.RenameColumns(源,{{"gross_amount_gbp", "总金额"}, {"invoice_count", "有效发票数"}, {"avg_invoice_gbp", "平均发票金额"}})
+				in
+				    重命名的列
+
+	annotation PBI_ResultType = Table
+
